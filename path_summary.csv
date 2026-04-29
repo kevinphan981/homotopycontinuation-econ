@@ -1,0 +1,5 @@
+path_id,x_re,x_im,y_re,y_im,is_success,is_real,residual,accepted_steps,rejected_steps
+1,1.0,0.0,1.0,0.0,true,true,0.0,13,0
+2,1.0,0.0,-1.0,0.0,true,true,0.0,13,0
+3,-1.0,0.0,1.0,0.0,true,true,0.0,13,0
+4,-1.0,0.0,-1.0,0.0,true,true,0.0,13,0

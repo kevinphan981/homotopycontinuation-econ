@@ -53,10 +53,16 @@ plot_ly(df) %>%
             split = ~path_id, type = 'scatter3d', mode = 'lines',
             name = ~paste("Path", path_id, "(y)"),
             line = list(dash = 'dot')) %>%
-  layout(title = "Complex Evolution of X (solid) and Y (dotted)",
-         scene = list(xaxis = list(title = 'Real Part'),
-                      yaxis = list(title = 'Imaginary Part'),
-                      zaxis = list(title = 'Step')))
+  layout(
+    title = "Complex Evolution of X (solid) and Y (dotted)",
+    scene = list(
+      xaxis = list(title = 'Real Part'),
+      yaxis = list(title = 'Imaginary Part'),
+      zaxis = list(title = 'Step'),
+      # Manual control over aspect ratio
+      aspectmode = "manual",
+      aspectratio = list(x = 2, y = 2, z = 1) # X and Y are twice as long as Z
+    ))
 
 
 # create the plot for x
@@ -75,13 +81,8 @@ p2 <- plot_ly(df, x = ~y_real, y = ~y_imag, z = ~step,
                       yaxis = list(title = 'Im(y)'),
                       zaxis = list(title = 'Step')))
 
-# combine
-fig <- subplot(p1, p2, margin = 0.05) %>%
-  layout(title = "Complex Path Evolution: Variable X (Left) vs Variable Y (Right)",
-         scene = list(domain = list(x = c(0, 0.45))),
-         scene2 = list(domain = list(x = c(0.55, 1)),
-                       xaxis = list(title = 'Re(y)'),
-                       yaxis = list(title = 'Im(y)'),
-                       zaxis = list(title = 'Step')))
-
-fig
+scene_style <- list(
+  xaxis = list(title = "Real Part"),
+  yaxis = list(title = "Imaginary Part"),
+  zaxis = list(title = "Step (t)")
+)

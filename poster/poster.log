@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Homebrew)  (format=lualatex 2026.3.1)  4 MAY 2026 00:11
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Homebrew)  (format=lualatex 2026.3.1)  4 MAY 2026 00:38
  restricted system commands enabled.
 **poster.tex
 (./poster.tex
@@ -1668,37 +1668,34 @@ Package luatex.def Info: logos/uhm-logo-huge.png  used on input line 77.
 (luatex.def)             Requested size: 256.07692pt x 256.0748pt.
 File: logos/uhm-logo-huge.png Graphic file (type png)
 <use logos/uhm-logo-huge.png>
-Package luatex.def Info: logos/uhm-logo-huge.png  used on input line 243.
+Package luatex.def Info: logos/uhm-logo-huge.png  used on input line 245.
 (luatex.def)             Requested size: 256.07692pt x 256.0748pt.
 <figures/duff-diagram-basic.png, id=18, 446.66875pt x 312.16624pt>
 File: figures/duff-diagram-basic.png Graphic file (type png)
 <use figures/duff-diagram-basic.png>
-Package luatex.def Info: figures/duff-diagram-basic.png  used on input line 243
+Package luatex.def Info: figures/duff-diagram-basic.png  used on input line 245
 .
 (luatex.def)             Requested size: 665.795pt x 465.35214pt.
-<figures/test2-true.png, id=19, 650.43pt x 604.2575pt>
-File: figures/test2-true.png Graphic file (type png)
-<use figures/test2-true.png>
-Package luatex.def Info: figures/test2-true.png  used on input line 243.
-(luatex.def)             Requested size: 665.795pt x 618.57501pt.
+<figures/fix-test2.png, id=19, 691.58376pt x 490.83376pt>
+File: figures/fix-test2.png Graphic file (type png)
+<use figures/fix-test2.png>
+Package luatex.def Info: figures/fix-test2.png  used on input line 245.
+(luatex.def)             Requested size: 665.795pt x 472.54315pt.
 <figures/bertrand-prices.png, id=20, 517.935pt x 517.935pt>
 File: figures/bertrand-prices.png Graphic file (type png)
 <use figures/bertrand-prices.png>
-Package luatex.def Info: figures/bertrand-prices.png  used on input line 243.
+Package luatex.def Info: figures/bertrand-prices.png  used on input line 245.
 (luatex.def)             Requested size: 665.795pt x 665.86284pt.
  (./poster.bbl)
-Overfull \vbox (25.82352pt too high) detected at line 243
- []
-
 File: logos/uhm-logo-huge.png Graphic file (type png)
 <use logos/uhm-logo-huge.png>
-Package luatex.def Info: logos/uhm-logo-huge.png  used on input line 243.
+Package luatex.def Info: logos/uhm-logo-huge.png  used on input line 245.
 (luatex.def)             Requested size: 256.07692pt x 256.0748pt.
-[1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updma
-p/pdftex.map}
+ [1{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}
 
-<./logos/uhm-logo-huge.png><./figures/duff-diagram-basic.png><./figures/test2-tr
-ue.png><./figures/bertrand-prices.png>]
+<./logos/uhm-logo-huge.png><./figures/duff-diagram-basic.png><./figures/fix-test
+2.png><./figures/bertrand-prices.png>]
 \tf@nav=\write6
 
 \openout6 = poster.nav
@@ -1708,7 +1705,8 @@ ue.png><./figures/bertrand-prices.png>]
 \tf@snm=\write8
 
 \openout8 = poster.snm
- (./poster.aux)
+
+(./poster.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1719,14 +1717,14 @@ Package rerunfilecheck Info: File `poster.out' has not changed.
 
 Here is how much of LuaTeX's memory you used:
  40759 strings out of 476076
- 244177,1648299 words of node,token memory allocated
- 52279 words of node memory still in use:
-   460 hlist, 65 vlist, 60 rule, 307 disc, 72 local_par, 86 math, 1413 glue, 687
- kern, 212 penalty, 3205 glyph, 1028 attribute, 82 glue_spec, 1028 attribute_lis
+ 244175,1648299 words of node,token memory allocated
+ 54347 words of node memory still in use:
+   464 hlist, 65 vlist, 60 rule, 318 disc, 72 local_par, 92 math, 1453 glue, 730
+ kern, 214 penalty, 3397 glyph, 1034 attribute, 82 glue_spec, 1034 attribute_lis
 t, 4 write, 152 pdf_literal, 2 pdf_dest, 274 pdf_colorstack, 4 pdf_setmatrix, 4 
 pdf_save, 4 pdf_restore nodes
-   avail lists: 2:388,3:1159,4:969,5:2159,6:224,7:14572,8:40,9:1901,10:16,11:933
-
+   avail lists: 1:2,2:388,3:1165,4:969,5:2288,6:224,7:15286,8:40,9:1913,10:16,11
+:966
  61924 multiletter control sequences out of 65536+600000
  109 fonts using 18474055 bytes
  128i,20n,116p,726b,1072s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1746,7 +1744,7 @@ m/lmmi12.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1
 /public/lm/lmmib10.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/f
 onts/type1/public/lm/lmr17.pfb></opt/homebrew/Cellar/texlive/20260301/share/texm
 f-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on poster.pdf (1 page, 634133 bytes).
+Output written on poster.pdf (1 page, 631743 bytes).
 
 PDF statistics: 98 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream

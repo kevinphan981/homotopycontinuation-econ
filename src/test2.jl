@@ -4,7 +4,7 @@ using HomotopyContinuation
 F = System([x^2 + y^2 - 3, 2x^2 + 0.5x*y + 3y^2 - 2])
 
 # construct start system and homotopy
-G = System([x^2 - 1, y^2 - 1])
+G = System(im*[x^2 - 1, y^2 - 1])
 H = StraightLineHomotopy(G, F)
 start_solutions = [[1,1], [-1,1], [1,-1], [-1,-1]]
 
@@ -13,13 +13,13 @@ results = solve(F, start_system = :total_degree)
 print(results)
 sol_coords = solutions(results)
 
+println("========================SOLUTIONS=========================")
 # To see them clearly in the console:
 for s in sol_coords
     println(s)
 end
 
 # construct tracker
-
 tracker = Tracker(H)
 
 # my poor attempts to get the actual path of each solution
@@ -46,26 +46,6 @@ end
 
 # broadcast to all solutions
 all_traces = capture_trace.(Ref(trckr), start_solutions)
-
-# # 2. To store the path for the first start solution
-# path1 = []
-
-# # 3. Use the iterator interface
-# # This manually steps from t=1 to t=0
-# for (x, t) in iterator(trckr, start_solutions[1], 1.0, 0.0)
-#     push!(path1, copy(x)) # We 'copy' because x is a reused buffer
-# end
-
-
-# # This is the easiest way for multiple paths
-# res = solve(G, F, start_solutions; keep_steps=true)
-
-# # To get the steps for the first path:
-# # Note: solve returns a 'PathResult', which DOES have a .steps field
-# steps_path_1 = res[1].steps_eg
-# println("---------- What is even going on --------")
-# print(steps_path_1)
-
 
 
 println("\n=======================RESULTS=======================\n")

@@ -1,7 +1,56 @@
-\documentclass{article}
+\documentclass[12pt, answers]{exam}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{palatino} % Fonts, can use whatever you want.
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin = 1.25in]{geometry}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{ucs}
+\usepackage{setspace}
 
-\title{Default Title}
-\author{Default Author}
+% Bunch of Other Functions (courtesy of Yash Lodha)
+% I rarely ever use these, but if you do it's in the same way the other ones work \begin{<whatever type>} \end{...}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{theorem}[thm]{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{example}[thm]{Example}
+\newtheorem{crl}[thm]{Corollary}
+\newtheorem{corollary}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{fact}[thm]{Fact}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem*{clm}{Claim}
+
+\theoremstyle{definition}
+\newtheorem{qu}[thm]{Question}
+\newtheorem{df}[thm]{Definition}
+\newtheorem{definition}[thm]{Definition}
+
+% makes the tombstone at the end of the proof fully black instead of a white square box
+\renewcommand\qedsymbol{$\clubsuit$}
+\usepackage{titling}
+
+% replace with what you 
+\title{Homotopy Continuation in Economics: Finding Equililbria Under Competition}
+\author{Kevin Phan\thanks{This was done as a seminar project (MATH 480) under Max Hill.}}
+\date{\today}
+
 \begin{document}
+
 \maketitle
+\doublespacing
+
+\begin{abstract}
+    Computational algebraic geometry has several unique applications in a variety of fields. The field of economics is rife with nonlinear systems of equations that are done for optimization and equilibrium analysis. One clear application of algebraic geometry is game theory, and I will focus on the game-theoretic models between competing firms, which is within the field of industrial organization.  With this presentation, I aim to introduce the audience to the basics of algebraic geometry, focusing on Homotopy Continuation methods. Then I will go over the common models in economics to show applications through the programming language Julia. I will walk through a simple example of the Bertrand Price Model, where two firms compete with varying strategies in order to maximize profit to motivate this field of research. In the end, I hope to show the basics of homotopy continuation with an endearing example that motivates future research.
+\end{abstract}
+
+%include and insert a url to a spreadsheet or something.
+\include{sections/stackelberg}
+\include{sections/bertrand-simple}
+
 \end{document}

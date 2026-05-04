@@ -24,7 +24,7 @@ df_dq2   = -2*b*(q1 + q2) - 2*b*(q1 + q2) - 2*b*q2 # Partial of f w.r.t q2
 g = dpi1_dq1 * df_dq2 - dpi1_dq2 * df_dq1
 
 system = System([f, g])
-result = solve(system)
+result = solve(system, start_system = :total_degree)
 print(result)
 # solutions(result)
 

@@ -4,12 +4,23 @@ using HomotopyContinuation
 F = System([x^2 + y^2 - 3, 2x^2 + 0.5x*y + 3y^2 - 2])
 
 # construct start system and homotopy
-G = System(im * [x^2 - 1, y^2 - 1])
+G = System([x^2 - 1, y^2 - 1])
 H = StraightLineHomotopy(G, F)
 start_solutions = [[1,1], [-1,1], [1,-1], [-1,-1]]
+
+results = solve(F, start_system = :total_degree)
+# This returns a vector of vectors (the raw coordinates)
+print(results)
+sol_coords = solutions(results)
+
+# To see them clearly in the console:
+for s in sol_coords
+    println(s)
+end
+
 # construct tracker
 
-# tracker = Tracker(H)
+tracker = Tracker(H)
 
 # my poor attempts to get the actual path of each solution
 # tracker = coretracker(H; max_step_size = 0.01) #parameters = p, start_parameters = a, target_parameters = b

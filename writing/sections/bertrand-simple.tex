@@ -1,0 +1,40 @@
+
+\section{Introduction}
+
+\subsection{What is a homotopy and algebraic geometry?}
+
+
+\section{Bertrand Price Model}
+The bertrand price model is a game between two firms, where the objective is to maximize profit (or so i think).
+
+Consider products $x, y$, with $p_x, p_y$ being the price of the goods. We have customer segmentation, with three types (1, 2, and 3). Thus, we can estimate the demand curves of the three customer types according to each product. In total we should have six demand curves.
+
+Let type 1 customers only desire good $x$, leaving $y$ unwanted. Thus, $Dx1 = A - p_x, Dy1 = 0$. 
+
+For type 3 customers, let us assume the opposite and have them only prefer good $y$. Thus $Dx3 = 0, Dy3 = A - p_y$.
+
+Type 2, is a mixture of both goods. We additionally assume that $x, y$ are imperfect substitutes and have a constant elasticity of substitution and constant elasticity of demand for the bundle/composite good. Thus,
+\begin{align}
+    Dx2 &= np_x^{-\sigma}(p_x^{1-\sigma} + p_y^{1-\sigma})^{\frac{\gamma - \sigma}{-1 + \sigma}} \\
+    Dy2 &= np_y^{-\sigma}(p_x^{1-\sigma} + p_y^{1-\sigma})^{\frac{\gamma - \sigma}{-1 + \sigma}}
+\end{align}
+
+    We also have the following variables
+\begin{itemize}
+    \item $\sigma$, the elasticity of substitution between the goods
+    \item $\gamma$, the elasticity of demand for the composite good/bundle $(q_1^{(\sigma-1)/\sigma} + q_2^{(\sigma-1)/\sigma})^{\sigma/(\sigma - 1)}$.
+\end{itemize}
+
+
+The total demand of x and y are quite simple, it is simply the sum of all three demand curves for each good. Suppose $m$ is the unit cost for the firm, where we can then calculate profit.
+\begin{align*}
+    R_x  &= (p_x -m)Dx \\
+    R_y &= (p_y - m)Dy
+\end{align*}
+
+For the uninitiated, the variables $Dx, Dy$ is the quantity demanded. In economics, the price is usually the input of the function. 
+
+We can let the parameters in the model be equal to something, for example: $\sigma =3, \gamma = 2, n = 2700, m = 1, A = 50$.  Plugging in these values, we can calculate the marginal profits of each good, and when $MR_x = MR_y$, we should have equilibrium prices be satisfied.
+
+Blah blah blah, take the derivatives of each thing, let $Z$ be some part of it so it's a simpler polynomial, use a solver. 
+

@@ -57,8 +57,8 @@ df_sols = df_bertrand %>%
   ungroup()
 
 solutions = df_sols |>
-  filter(abs(px_im) < 1e-3, abs(py_im) < 1e-3, abs(py_re) < 1e-3, abs(px_re) < 1e-3) %>%
-  filter(px_re >= 0, py_re >= 0)
+  filter(abs(px_im) < 1e+3, abs(py_im) < 1e+3, abs(py_re) < 1e+3, abs(px_re) < 1e+3) %>%
+  filter(z_re >= 0.1, py_re >= 0.1)
 
 print(solutions)
 
@@ -101,3 +101,26 @@ fig <- plot_ly(df_bertrand,
 
 # Display the plot
 fig
+
+
+fig_2 <- plot_ly(df_bertrand, 
+               x = ~py_re, 
+               y = ~z_re, 
+               z = ~step, 
+               split = ~path_id, 
+               type = 'scatter3d', 
+               mode = 'lines',
+               line = list(width = 5),
+               opacity = 0.6) %>%
+  layout(
+    title = "Homotopy Continuation Paths: Real Prices x,y",
+    scene = list(
+      xaxis = list(title = "Re(px)"),
+      yaxis = list(title = "Re(py)"),
+      zaxis = list(title = "Step")
+    ),
+    showlegend = FALSE # Set to TRUE if you want to identify individual paths
+  )
+
+fig_2
+

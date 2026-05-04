@@ -7,6 +7,3 @@ The following is the type of problems that are considered, along with the exampl
 
 # Notes
 Anything that is done in Bertini we can do in HomotopyContinuation.jl. However, it is also good to consider some class or family of problems that we can explore further.
-
-## Weird Things
-To be seen.
